@@ -1,5 +1,5 @@
 # Max Jauhiainen
-Welcome to my personal portfolio! I’m a third-year Information Technology student at Tampere University.
+Welcome to my personal portfolio! I’m a third-year Information Technology student at Tampere University.                  ![Image of myself](/docs/assets/kuva-min.jpg)
 
 ## About Me
 I have experience in Python, C++, and Java, as well as in image and video editing.
