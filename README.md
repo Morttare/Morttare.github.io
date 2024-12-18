@@ -10,4 +10,4 @@ I have experience in Python, C++, and Java, as well as in image and video editin
 - Problem solving
 
 ## Contact
-You can reach me at [LinkedIn]([https://www.linkedin.com/username](https://www.linkedin.com/in/max-jauhiainen-9926082a7/)) or [GitHub](https://github.com/Morttare).
+You can reach me at [LinkedIn](https://www.linkedin.com/in/max-jauhiainen-9926082a7/) or [GitHub](https://github.com/Morttare).
