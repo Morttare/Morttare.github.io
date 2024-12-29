@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 1rem auto;
+        }
+        .skills {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #f4f4f4;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-left: 4px solid #333;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Max Jauhiainen</h1>
+    <p>Third-year student at Tampere University</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>Hello! My name is Max Jauhiainen and I'm studying Information Technology in Tampere University. </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul class="skills">
+        <li>Java, C++, Python</li>
+        <li>Android and backend developing experience with Java</li>
+        <li>Concurrency and optimization experience with C++</li>
+        <li>Basics of GLSL</li>
+        <li>Some video and photo editing as well</li>      
+    </ul>
+</section>
+
+<section>
+    <h2>Portfolio Videos</h2>
+
+    <h3>Project 1: Koulukompassi</h3>
+    <video muted>
+        <source src="docs/assets/koulukompassi.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>I worked mostly on the backend of the project with Java, handling the data related to high schools. I also managed the visualization of the data in frontend.</p>
+
+    <h3>Project 2: Target practice/h3>
+    <video muted>
+        <source src="docs/assets/targetpractice.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>A small shooter game made with Unreal Engine.</p>
+
+    <h3>Project 3: Wordle as an Android app</h3>
+    <video muted>
+        <source src="docs/assets/wordleapp.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>A mobile Wordle game made with Android Studio.</p>
+
+    <h3>Project 4: Wordle with JavaFX</h3>
+    <video muted>
+        <source src="docs/assets/wordlefx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>Another Wordle, but implemented with JavaFX, for desktop.</p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Feel free to reach out through the following platforms:</p>
+    <ul>
+        <li><a href="mailto:max.jauhiainen@gmail.com">Email: max.jauhiainen@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/max-jauhiainen-9926082a7/" target="_blank">LinkedIn: Max Jauhiainen</a></li>
+        <li><a href="https://github.com/Morttare" target="_blank">GitHub: github.com/Morttare</a></li>       
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Max Jauhiainen. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Function to handle autoplay when videos enter the viewport
+    const handleAutoplay = (entries, observer) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                video.play(); // Play the video when in view
+            } else {
+                video.pause(); // Pause the video when out of view
+            }
+        });
+    };
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(handleAutoplay, {
+        threshold: 0.5 // Trigger when 50% of the video is in view
+    });
+
+    // Observe all videos on the page
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        observer.observe(video);
+    });
+</script>
+  
+</body>
+</html>
