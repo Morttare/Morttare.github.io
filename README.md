@@ -1,4 +1,4 @@
-# Max Jauhiainen
+# Portfolio
 Welcome to my personal portfolio! I’m a third-year Information Technology student at Tampere University.
 
 ## About Me
